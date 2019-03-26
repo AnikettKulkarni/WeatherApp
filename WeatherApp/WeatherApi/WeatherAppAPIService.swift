@@ -55,7 +55,6 @@ class WeatherAppAPI: WeatherAppAPIInterface {
         urlForRequest.append(".json")
         guard var urlComponents = URLComponents(string: urlForRequest) else { return }
         guard let url = urlComponents.url else { return }
-        print("\(url.absoluteString)")
         
         let task = URLSession.shared.downloadTask(with: url) { localURL, urlResponse, error in
             defer {
@@ -71,7 +70,6 @@ class WeatherAppAPI: WeatherAppAPIInterface {
                     var model = [WeatherAppResponse]()
                     
                     if let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: .allowFragments){
-                        print(jsonResponse)
                         guard let jsonArray = jsonResponse as? [[String: Any]] else {
                             return
                         }

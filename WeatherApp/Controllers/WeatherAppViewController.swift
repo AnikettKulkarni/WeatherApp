@@ -7,20 +7,6 @@
 //
 
 import UIKit
-enum Months :Int{
-    case January = 1
-    case February
-    case March
-    case April
-//    case May =
-//    case June = "6"
-//    case July = "7"
-//    case August = "8"
-//    case September = "9"
-//    case October = "10"
-//    case November = "11"
-//    case December = "12"
-}
 struct Constants {
     static let cellIdentifier = "weatherDataCell"
     static let collectionCellNibName = "WeatherAppCollectionViewCell"
